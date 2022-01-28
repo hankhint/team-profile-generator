@@ -1,0 +1,26 @@
+{
+  "name": "teamprofilegenerator",
+  "version": "1.0.0",
+  "description": "makes a profile for your team members so you can easily contact them",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hankhint/teamProfileGenerator.git"
+  },
+  "author": "Hank Hint",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hankhint/teamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/hankhint/teamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "jest": "^27.4.7"
+  }
+}
