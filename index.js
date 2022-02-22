@@ -189,3 +189,9 @@ const addEmployee = () => {
       }
     });
 };
+
+addManager()
+    .then(addEmployee)
+    .then(teamArray => {
+        return generateHTML(teamArray);
+    })
