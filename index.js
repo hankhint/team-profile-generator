@@ -190,8 +190,23 @@ const addEmployee = () => {
     });
 };
 
+const writeToFile = (data) => {
+  fs.writeFile(".dist/index.html", data, (err) => {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      console.log("Team Profile Successfully Created. Check distindex.html");
+    }
+  });
+};
+
 addManager()
-    .then(addEmployee)
-    .then(teamArray => {
-        return generateHTML(teamArray);
-    })
+  .then(addEmployee)
+  .then((teamArray) => {
+    return generateHTML(teamArray);
+  })
+  .then((profilePage) => {
+    return writeToFile(profilePage);
+  })
+  .catch(err => {console.log(err)});
