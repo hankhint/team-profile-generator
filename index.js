@@ -20,7 +20,7 @@ const addManager = () => {
       {
         type: "input",
         name: "name",
-        message: "Welcome, manager, please enter your name.",
+        message: "Welcome, manager, please enter your name:",
         validate: (nameInput) => {
           if (nameInput) {
             return true;
@@ -33,7 +33,7 @@ const addManager = () => {
       {
         type: "input",
         name: "id",
-        message: "Please enter your work ID.",
+        message: "Please enter your work ID:",
         validate: (idInput) => {
           if (isNaN(idInput)) {
             console.log("Please enter your work ID.");
@@ -46,7 +46,7 @@ const addManager = () => {
       {
         type: "input",
         name: "email",
-        message: "Please enter your email.",
+        message: "Please enter your email:",
         validate: (emailInput) => {
           if (emailInput) {
             return true;
@@ -59,7 +59,7 @@ const addManager = () => {
       {
         type: "input",
         name: "officeNumber",
-        message: "Please enter the office number of the manager.",
+        message: "Please enter the office number of the manager:",
         validate: (officeNumberInput) => {
           if (isNaN(officeNumberInput)) {
             console.log("Please enter the correct office number.");
@@ -75,7 +75,7 @@ const addManager = () => {
       const manager = new Manager(name, id, email, officeNumber);
 
       teamArray.push(manager);
-      console.log(manager);
+    //  console.log(manager);
     });
 };
 
@@ -90,13 +90,13 @@ const addEmployee = () => {
       {
         type: "list",
         name: "role",
-        message: "Would you like to an engineer or an intern?",
+        message: "Would you like to add an engineer or an intern?",
         choices: ["Engineer", "Intern"],
       },
       {
         type: "input",
         name: "name",
-        message: "Please enter the name of the employee.",
+        message: "Please enter the name of the employee:",
         validate: (nameInput) => {
           if (nameInput) {
             return true;
@@ -109,10 +109,10 @@ const addEmployee = () => {
       {
         type: "input",
         name: "id",
-        message: "Please enter the employee id.",
+        message: "Please enter the employee id:",
         validate: (idInput) => {
           if (isNaN(idInput)) {
-            console.log("Enter the employee's ID.");
+            console.log("Enter the employee ID.");
             return false;
           } else {
             return true;
@@ -122,7 +122,7 @@ const addEmployee = () => {
       {
         type: "input",
         name: "email",
-        message: "Please enter the email of the employee.",
+        message: "Please enter the email of the employee:",
         validate: (emailInput) => {
           if (emailInput) {
             return true;
@@ -136,7 +136,7 @@ const addEmployee = () => {
         // inquirer prompt for the engineer
         type: "input",
         name: "github",
-        message: "Please enter the GitHub username of the employee.",
+        message: "Please enter the GitHub username of the employee:",
         when: (input) => input.role === "Engineer",
         validate: (githubInput) => {
           if (githubInput) {
@@ -191,7 +191,7 @@ const addEmployee = () => {
 };
 
 const writeToFile = (data) => {
-  fs.writeFile(".dist/index.html", data, (err) => {
+  fs.writeFile("./dist/index.html", data, (err) => {
     if (err) {
       console.log(err);
       return;

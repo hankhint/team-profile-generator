@@ -33,9 +33,6 @@ const generateEngineer = function (engineer) {
     <div class="card blue-grey darken-1">
       <div class="card-content white-text">
         <span class="card-title">${engineer.name}</span>
-        <a class="subtitle is-6" href="mailto:${
-          engineer.email
-        }" target="_blank">Send ${engineer.email} an email</a>
         <p>${engineer.getRole()}</p>
         <div>
         <span>ID: ${engineer.id}</span>
@@ -90,16 +87,16 @@ generateHTML = (data) => {
     const employee = data[i];
     const role = employee.getRole();
 
-    if (role === "Manager") {
+    if (role === 'Manager') {
       const managerInfoInput = generateManager(employee);
       pageArray.push(managerInfoInput);
     }
 
-    if (role === "Engineer") {
+    if (role === 'Engineer') {
       const engineerInfoInput = generateEngineer(employee);
       pageArray.push(engineerInfoInput);
     }
-    if (role === "Manager") {
+    if (role === 'Intern') {
       const internInfoInput = generateIntern(employee);
       pageArray.push(internInfoInput);
     }
