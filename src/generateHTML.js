@@ -21,7 +21,7 @@ const generateManager = function (manager) {
     </div>
   </div>
 </div>
- `;
+`;
 };
 
 // Generate HTML for Engineer
@@ -39,23 +39,47 @@ const generateEngineer = function (engineer) {
         <p>${engineer.getRole()}</p>
         <div>
         <span>ID: ${engineer.id}</span>
-        <span>Github ID: ${engineer}</span>
       </div>    
         </div>
       <div class="card-action">
-      <a href="https://github.com/${engineer.github}" target="_blank">GitHub: https://github.com/${engineer.github}</a>
+      <a href="https://github.com/${
+        engineer.github
+      }" target="_blank">GitHub: https://github.com/${engineer.github}</a>
       </div>
+      <div class="card-action">
+      <a href="mailto:${engineer.email}" target="_blank">Send ${
+    engineer.name
+  } an email</a>
+    </div>
     </div>
   </div>
 </div>
-    `;
+`;
 };
 
 // Generate HTML for Intern
 const generateIntern = function (intern) {
   return `
-<p>intern card</p>
-    `;
+  <div class="row">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">${intern.name}</span>
+        <p>${intern.getRole()}</p>
+        <div>
+        <span>ID: ${intern.id}</span>
+        <span>School: ${intern.school}</span>
+      </div>    
+        </div>
+      <div class="card-action">
+        <a href="mailto:${intern.email}" target="_blank">Send ${
+    intern.name
+  } an email</a>
+      </div>
+    </div>
+  </div>
+</div>    
+`;
 };
 
 // Process team data and create html cards
@@ -83,6 +107,7 @@ const generateTeamPage = function (employeeCards) {
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <body>
+    ${employeeCards}
     </body>
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
