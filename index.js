@@ -79,6 +79,7 @@ const addManager = () => {
     });
 };
 
+//inquirer prompts for engineer and intern
 const addEmployee = () => {
   console.log(`
     -------------------
