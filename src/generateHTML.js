@@ -87,13 +87,22 @@ generateHTML = (data) => {
   let pageArray = [];
 
   for (let i = 0; i < data.length; i++) {
-      const employee = data[i];
-      const role = employee.getRole();
+    const employee = data[i];
+    const role = employee.getRole();
 
-      if (role === 'Manager') {
-          const managerInfoInput = generateManager(employee);
-          pageArray.push(managerInfoInput);
-      }
+    if (role === "Manager") {
+      const managerInfoInput = generateManager(employee);
+      pageArray.push(managerInfoInput);
+    }
+
+    if (role === "Engineer") {
+      const engineerInfoInput = generateEngineer(employee);
+      pageArray.push(engineerInfoInput);
+    }
+    if (role === "Manager") {
+      const internInfoInput = generateIntern(employee);
+      pageArray.push(internInfoInput);
+    }
   }
 
   const employeeCards = pageArray.join("");
