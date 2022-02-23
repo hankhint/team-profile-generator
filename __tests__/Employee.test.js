@@ -1,3 +1,5 @@
+
+//link to file with methods that are being tested
 const Employee = require('../lib/Employee');
 
 //creates a new employee object to test name is a string, id number is a number, and email is a string
