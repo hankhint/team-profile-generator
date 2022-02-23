@@ -174,10 +174,10 @@ const addEmployee = () => {
 
       if (role === "Engineer") {
         employee = new Engineer(name, id, email, github);
-        console.log(employee);
+       // console.log(employee);
       } else if (role === "Intern") {
         employee = new Intern(name, id, email, school);
-        console.log(employee);
+      //  console.log(employee);
       }
 
       teamArray.push(employee);
@@ -196,7 +196,7 @@ const writeToFile = (data) => {
       console.log(err);
       return;
     } else {
-      console.log("Team Profile Successfully Created. Check distindex.html");
+      console.log("Team Profile Successfully Created. Check dist folder --> index.html");
     }
   });
 };
