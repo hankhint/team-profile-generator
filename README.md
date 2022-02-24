@@ -19,6 +19,9 @@ This project uses jest and inquirer
 
 ## Usage
 download the repo, run npm install, then run node app
+![teamprofilegenerator1](https://user-images.githubusercontent.com/50533231/155583594-e870812b-9381-480e-a940-8733421a2489.png)
+![teamprofilegenerator2](https://user-images.githubusercontent.com/50533231/155583587-d4035ba1-0598-49e2-8d1e-ad1122652083.png)
+
 
 
 ## License
